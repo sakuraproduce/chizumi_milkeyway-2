@@ -1,0 +1,32 @@
+.footer {
+	background: #5F5E5E;
+	width: 100%;
+	padding: 20.5px 0;
+
+	@include mq("tab") {
+		padding: 18px 150px;
+	}
+	@include mq("sp") {
+		padding: 18px 50px;
+	}
+
+	&-wrap {
+		display: flex;
+		justify-content: center;
+	}
+
+	&-sns {
+		margin-bottom: 25.68px;
+	}
+
+	&-sns + &-sns {
+		margin-left: 68px;
+	}
+
+	&-copyright {
+		@include font-size(2rem, 1.4rem);
+		color: $cr-txt-w;
+		text-align: center;
+		font-family: 'Helvetica Neue';
+	}
+}

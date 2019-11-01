@@ -1,0 +1,104 @@
+.intro {
+	@include mq("sp") {
+		padding: 0 16px;
+	}
+
+	&-title {
+		@include font-size(4.6rem, 3rem);
+		font-weight: bold;
+		padding: 149.5px 0 118px;
+		text-align: center;
+		position: relative;
+
+		&::before {
+			content: '';
+			position: absolute;
+			left: 50%;
+			bottom: 115px;/*線の上下位置*/
+			display: inline-block;
+			width: 32.2%;/*線の長さ*/
+			height: 5px;/*線の太さ*/
+			transform: translateX(-50%);/*位置調整*/
+			background-color: $cr-txt;/*線の色*/
+
+			@include mq("sp") {
+				bottom: 105px;
+			}
+		}
+
+		@include mq("tab") {
+			padding: 118px 0 118px;
+		}
+	}
+
+	&-inner {
+		margin-right: 11.9%;
+		display: flex;
+		justify-content: space-between;
+
+		@include mq("tab") {
+			margin-right: 0;
+		}
+
+		@include mq("sp") {
+			flex-direction: column;
+		}
+	}
+
+	&-img {
+		width: 67.5%;
+
+		@include mq("tab") {
+			width: 50%;
+		}
+
+		@include mq("sp") {
+			width: 100%;
+		}
+	}
+
+	&-wrap {
+		width: 26.3%;
+
+		@include mq("tab") {
+			width: 40%;
+		}
+
+		@include mq("sp") {
+			width: 255px;
+			margin: 0 auto;
+			padding-top: 40px;
+		}
+	}
+
+	&-text {
+		@include font-size(1.6rem, 1.4rem);
+		font-weight: bold;
+		margin-bottom: 40px;
+
+		@include mq("sp") {
+			margin-bottom: 30px;
+		}
+	}
+
+	&-btn {
+
+		@include mq("sp") {
+			text-align: center;
+		}
+
+		a {
+			@include btn(140px,0,0.7rem,2rem,$cr-txt-w,$cr-txt);
+			border: 2px solid $cr-txt;
+			font-weight: bold;
+			text-align: center;
+			box-shadow: 0px 3px 6px #00000029;
+
+			&:hover {
+				background: $cr-m;
+				color: $cr-txt-w;
+				opacity: 1;
+			}
+		}
+	}
+}

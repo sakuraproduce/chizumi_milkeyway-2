@@ -1,0 +1,39 @@
+.catch2 {
+	background: resolve('catch2.png') no-repeat center center / cover;
+	padding: 157px 0 266.5px;
+
+	@include mq("sp") {
+		padding: 120px 0 200px;
+	}
+
+	&-inner {
+		margin: 0 auto;
+		width: 832px;
+		max-width: 100%;
+		color: $cr-txt-w;
+
+		@include mq("tab") {
+			padding: 0 35px;
+		}
+
+		@include mq("sp") {
+			padding: 0 24px;
+		}
+	}
+
+	&-title {
+		@include font-size(3.2rem, 3rem);
+		font-weight: bold;
+		margin-bottom: 60px;
+	}
+
+	&-text {
+		@include font-size(2rem, 1.8rem);
+		font-weight: bold;
+		margin-bottom: 50px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
